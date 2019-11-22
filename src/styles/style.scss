@@ -1,0 +1,117 @@
+/// BULMA STYLES
+
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+// Set your brand colors
+$orange: rgb(255,	130,	67);
+$dark-orange: rgb(237, 71, 38);
+$green: rgb(85,	224, 114);
+$green-light: rgb(215,	252,	126);
+$blue: rgb(0,	109,	240);
+$grey-dark: #3e3e3e;
+$grey-light: rgb(179, 179, 179);
+$white: #FFFFFF;
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+// $grey-dark: ;
+// $grey-light: ;
+$primary: $orange;
+$info: $orange;
+$link: $green;
+$warning: $dark-orange;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $white;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// Import only what you need from Bulma
+@import "../../node_modules/bulma/sass/utilities/_all.sass";
+@import "../../node_modules/bulma/sass/base/_all.sass";
+@import "../../node_modules/bulma/sass/elements/button.sass";
+@import "../../node_modules/bulma/sass/elements/container.sass";
+@import "../../node_modules/bulma/sass/elements/title.sass";
+@import "../../node_modules/bulma/sass/form/_all.sass";
+@import "../../node_modules/bulma/sass/components/navbar.sass";
+@import "../../node_modules/bulma/sass/layout/hero.sass";
+@import "../../node_modules/bulma/sass/layout/section.sass";
+@import "../../node_modules/bulma/sass/elements/progress.sass";
+@import "../../node_modules/bulma/sass/elements/tag.sass";
+
+
+
+/// OWN CSS
+
+#sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 5px 0;
+  background-color: rgba(250, 250, 250, 0.7)
+}
+
+.selected {
+  background-color: $orange;
+  box-shadow: 0 0 0px 5px $orange;
+}
+
+#logo {
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    padding: 15px;
+  }
+}
+
+.navbar {
+  img {
+    margin: 0 10px 0 0;
+  }
+}
+
+.level {
+  margin: 0 10vw;
+}
+
+.hero {
+  background-image: url(../images/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.tag {
+  margin: 5px;
+}
+
+.city-title {
+  height: 30vh;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  border-radius: 10px;
+
+  margin: 0 0 5vh 0;
+
+  .title {
+    background-color: rgba(250, 250, 250, 0.7);
+    padding: 15px;
+  }
+}
+
+.categories {
+  margin: 10px 0;
+}
