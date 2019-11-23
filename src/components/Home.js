@@ -6,7 +6,7 @@ const Home = () => (
       <div className="container" id="logo">
 
         <figure className="image is-128x128 has-text-centered" >
-          <img src="../../images/city.png" alt=""/>
+          <img src="../images/city.png" alt=""/>
         </figure>
         
         <div className="title">Metropolists</div>
