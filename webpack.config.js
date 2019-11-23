@@ -6,16 +6,15 @@ module.exports = {
   entry: './src/app.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve('dist')
+    path: path.resolve('dist'),
+    publicPath: '/metropolists/'
   },
   module: {
     rules: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.css$/, loader: ['style-loader', 'css-loader'] },
       { test: /\.s(a|c)ss$/, loader: ['style-loader', 'css-loader', 'sass-loader'] },
-      { test: /\.(jpg|png|gif)/, use: [{
-        loader: 'url-loader', options: { limit: 5000 }
-      }] }
+      { test: /\.png$/, loader: 'file-loader' }
     ]
   },
   devServer: {
