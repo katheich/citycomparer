@@ -12,8 +12,9 @@ import CompareCities from './components/CompareCities'
 
 
 const App = () => (
-  <BrowserRouter basename="metrolopolists">
+  <BrowserRouter>
     <Navbar />
+    {console.log(process.env.PUBLIC_URL)}
     <Switch>
       <Route exact path={'/'} component={Home} />
       <Route exact path="/cities" component={Cities} />
