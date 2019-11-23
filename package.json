@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "webpack-dev-server --mode=development",
-    "build": "wepback -p",
+    "build": "webpack -p",
     "deploy": "yarn build && gh-pages -d dist"
   },
   "author": "",
