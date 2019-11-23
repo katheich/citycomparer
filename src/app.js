@@ -4,7 +4,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 import 'bulma'
 import './styles/style.scss'
-import Axios from 'axios'
 
 import Home from './components/Home'
 import Cities from './components/Cities'
