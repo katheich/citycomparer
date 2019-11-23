@@ -12,10 +12,10 @@ import CompareCities from './components/CompareCities'
 
 
 const App = () => (
-  <BrowserRouter>
+  <BrowserRouter basename="metrolopolists">
     <Navbar />
     <Switch>
-      <Route exact path="/" component={Home} />
+      <Route exact path={'/'} component={Home} />
       <Route exact path="/cities" component={Cities} />
       <Route path="/:id1/:id2" component={CompareCities} />
     </Switch>
@@ -25,6 +25,6 @@ const App = () => (
 
 
 ReactDOM.render(
-  <App />,
+  <App basename={process.env.PUBLIC_URL} />,
   document.getElementById('root')
 )
