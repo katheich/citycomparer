@@ -26,6 +26,6 @@ const App = () => (
 
 
 ReactDOM.render(
-  <App basename={process.env.PUBLIC_URL} />,
+  <App />,
   document.getElementById('root')
 )
