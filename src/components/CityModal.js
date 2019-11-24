@@ -3,7 +3,7 @@ import React from 'react'
 import Axios from 'axios'
 
 function numberWithCommas(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '','')
 }
 
 class CityModal extends React.Component {
@@ -19,7 +19,7 @@ class CityModal extends React.Component {
     const slug = this.props.info[0]
 
     Axios.get(`https://api.teleport.org/api/urban_areas/slug:${slug}/details`)
-      .then(resp => this.setState({ data: resp.data }))
+      .then(resp => this.setState({ data: resp.data }, console.log(this.state.data)))
       .catch(err => this.setState({ errors: err.response.status }))
   }
 
