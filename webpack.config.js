@@ -24,7 +24,8 @@ module.exports = {
           {
             loader: 'html-loader',
             options: {
-              root: path.resolve(__dirname, 'app')
+              root: path.resolve(__dirname, 'app'),
+              attrs: ['img:src', 'link:href']
             }
           }
         ]
