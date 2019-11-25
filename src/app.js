@@ -12,11 +12,11 @@ import CompareCities from './components/CompareCities'
 
 
 const App = () => (
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
+  <BrowserRouter>
     <Navbar />
     {console.log(process.env.PUBLIC_URL)}
     <Switch>
-      <Route exact path={'/'} component={Home} />
+      <Route exact path={process.env.PUBLIC_URL + '/'} component={Home} />
       <Route exact path="/cities" component={Cities} />
       <Route path="/:id1/:id2" component={CompareCities} />
     </Switch>
