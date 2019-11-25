@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
-import Logo from '../images/city.png'
+// import Logo from '../images/city.png'
 
 class Navbar extends React.Component {
 
@@ -26,7 +26,7 @@ class Navbar extends React.Component {
       <div className="container">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
-            <img src={Logo} height="28" />
+            <img src={this.props.logo} height="28" />
             Metropolists
           </Link>
           <a
