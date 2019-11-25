@@ -16,8 +16,18 @@ module.exports = {
       { test: /\.css$/, loader: ['style-loader', 'css-loader'] },
       { test: /\.s(a|c)ss$/, loader: ['style-loader', 'css-loader', 'sass-loader'] },
       { test: /\.png$/, loader: 'file-loader', options: {
-        outputPath: '/images',
-        publicPath: '/metropolists' }
+        outputPath: '/images'
+      }
+      },
+      { test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              root: path.resolve(__dirname, 'app')
+            }
+          }
+        ]
       }
     ]
   },

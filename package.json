@@ -32,6 +32,7 @@
     "bulma": "^0.7.5",
     "dotenv-webpack": "^1.7.0",
     "gh-pages": "^2.1.1",
+    "html-loader": "^0.5.5",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-map-gl": "^5.1.3",
