@@ -12,7 +12,7 @@ import CompareCities from './components/CompareCities'
 
 
 const App = () => (
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Navbar />
     {console.log(process.env.PUBLIC_URL)}
     <Switch>
@@ -27,6 +27,6 @@ const App = () => (
 
 
 ReactDOM.render(
-  <App basename={process.env.PUBLIC_URL} />,
+  <App />,
   document.getElementById('root')
 )
