@@ -12,11 +12,10 @@ import CompareCities from './components/CompareCities'
 
 
 const App = () => (
-  <BrowserRouter basename={'/metropolists'}>
+  <BrowserRouter basename="/metropolists">
     <Navbar />
-    {/* {console.log('/metropolists'} */}
     <Switch>
-      <Route exact path={'/'} component={Home} />
+      <Route exact path="/" component={Home} />
       <Route exact path="/cities" component={Cities} />
       <Route path="/:id1/:id2" component={CompareCities} />
     </Switch>
