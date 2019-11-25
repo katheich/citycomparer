@@ -20,6 +20,7 @@ const App = () => (
       <Route exact path="/cities" component={Cities} />
       <Route path="/:id1/:id2" component={CompareCities} />
     </Switch>
+    
   </BrowserRouter>
 )
 

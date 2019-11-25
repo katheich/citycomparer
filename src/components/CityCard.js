@@ -16,8 +16,22 @@ const CityCard = ({ city, selection, handleDetails, handleSelect }) => (
         <p className="has-text-grey-darker is-size-7">{city._links['ua:countries'][0].name}</p>
       </div>
       <footer className="card-footer">
-        <a className="card-footer-item is-size-5" onClick={(e) => handleDetails(e)} name={city.slug} id={city.name}><i className="fas fa-info-circle"></i></a>
-        <a className="card-footer-item" onClick={(e) => handleSelect(e)} name={city.slug} id={city.name}>{selection.includes(city.slug) ? <i className="fas fa-times-circle is-size-5"></i> : <i className="fas fa-check-circle is-size-5"></i>}</a>
+        <a 
+          className="card-footer-item is-size-5" 
+          onClick={(e) => handleDetails(e)} 
+          name={city.slug} 
+          id={city.name}
+        >
+          <i className="fas fa-info-circle"></i>
+        </a>
+        <a 
+          className="card-footer-item" 
+          onClick={(e) => handleSelect(e)} 
+          name={city.slug} 
+          id={city.name}
+        >
+          {selection.includes(city.slug) ? <i className="fas fa-times-circle is-size-5"></i> : <i className="fas fa-check-circle is-size-5"></i>}
+        </a>
       </footer>
     </div>
   </div>

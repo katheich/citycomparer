@@ -116,3 +116,16 @@ $input-shadow: none;
 .categories {
   margin: 10px 0;
 }
+
+.fa-map-marker-alt {
+  color: $orange;
+}
+
+.modal-card-head, .modal-card-foot {
+  background-color: $orange;
+
+  .modal-card-title {
+    color: white;
+  }
+  
+}

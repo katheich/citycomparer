@@ -62,12 +62,10 @@ class Cities extends React.Component {
 
   handleDetails(e) {
     const city = [e.target.name, e.target.id]
-    
+    console.log(city)
     this.setState({
       modalInfo: city
-    })
-
-    this.toggleModal()
+    }, () => this.toggleModal())
   }
 
   toggleModal() {
@@ -147,7 +145,12 @@ class Cities extends React.Component {
           <div className="container">
             <div className="columns is-mobile is-multiline">
               {this.filterCities().map((city, i) => {
-                return <CityCard key={i} city={city} selection={this.state.selection} handleDetails={(e) => this.handleDetails(e)} handleSelect={(e) => this.handleSelect(e) }/>
+                return <CityCard 
+                  key={i} 
+                  city={city} 
+                  selection={this.state.selection} 
+                  handleDetails={(e) => this.handleDetails(e)} 
+                  handleSelect={(e) => this.handleSelect(e) }/>
               })}
             </div>
               
