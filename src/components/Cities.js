@@ -40,9 +40,8 @@ class Cities extends React.Component {
   }
 
   handleSelect(e) {
-    let slug
-    e.target.name ? slug = e.target.name : slug = e.target.id
-    console.log(slug)
+    console.log(e.target)
+    const slug = e.target.dataset.slug
 
     let selection = [...this.state.selection]
 
@@ -61,7 +60,8 @@ class Cities extends React.Component {
   }
 
   handleDetails(e) {
-    const city = [e.target.name, e.target.id]
+    console.log(e.target)
+    const city = [e.target.dataset.slug, e.target.dataset.name]
     console.log(city)
     this.setState({
       modalInfo: city

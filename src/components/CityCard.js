@@ -19,18 +19,18 @@ const CityCard = ({ city, selection, handleDetails, handleSelect }) => (
         <a 
           className="card-footer-item is-size-5" 
           onClick={(e) => handleDetails(e)} 
-          name={city.slug} 
-          id={city.name}
+          data-name={city.name}
+          data-slug={city.slug}
         >
-          <i className="fas fa-info-circle"></i>
+          <i className="fas fa-info-circle" data-name={city.name} data-slug={city.slug} />
         </a>
         <a 
           className="card-footer-item" 
           onClick={(e) => handleSelect(e)} 
-          name={city.slug} 
-          id={city.name}
+          data-name={city.name}
+          data-slug={city.slug}
         >
-          {selection.includes(city.slug) ? <i className="fas fa-times-circle is-size-5"></i> : <i className="fas fa-check-circle is-size-5"></i>}
+          {selection.includes(city.slug) ? <i className="fas fa-times-circle is-size-5" data-name={city.name} data-slug={city.slug} /> : <i className="fas fa-check-circle is-size-5"  data-name={city.name} data-slug={city.slug} />}
         </a>
       </footer>
     </div>

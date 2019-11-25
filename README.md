@@ -42,3 +42,7 @@ Logo icon made by [Freepik](https://www.freepik.com/) from [www.flaticon.com](ht
 
 
 
+---
+
+To-Do:
+- fix city detail info display for cases where not same info is available

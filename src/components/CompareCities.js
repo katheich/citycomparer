@@ -99,7 +99,7 @@ class CompareCities extends React.Component {
                   {category.name}: {Math.round(category.score_out_of_10 * 10)} / 100
                 </p>
                 <progress 
-                  className={`progress ${(category.score_out_of_10 > this.state.data2.scores.categories[i].score_out_of_10) ? 'is-link' : 'is-warning'}`} 
+                  className={`progress ${(category.score_out_of_10 > this.state.data2.scores.categories[i].score_out_of_10) ? 'is-link' : (category.score_out_of_10 < this.state.data2.scores.categories[i].score_out_of_10) ? 'is-warning' : 'is-primary'}`} 
                   value={category.score_out_of_10} 
                   max="10" 
                 >
@@ -124,7 +124,7 @@ class CompareCities extends React.Component {
                   {category.name}: {Math.round(category.score_out_of_10 * 10)} / 100
                 </p>
                 <progress 
-                  className={`progress ${(category.score_out_of_10 > this.state.data1.scores.categories[i].score_out_of_10) ? 'is-link' : 'is-warning'}`} 
+                  className={`progress ${(category.score_out_of_10 > this.state.data1.scores.categories[i].score_out_of_10) ? 'is-link' : (category.score_out_of_10 < this.state.data1.scores.categories[i].score_out_of_10) ? 'is-warning' : 'is-primary'}`} 
                   value={category.score_out_of_10} 
                   max="10" 
                 >
