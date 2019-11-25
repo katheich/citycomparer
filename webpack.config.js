@@ -15,20 +15,9 @@ module.exports = {
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.css$/, loader: ['style-loader', 'css-loader'] },
       { test: /\.s(a|c)ss$/, loader: ['style-loader', 'css-loader', 'sass-loader'] },
-      { test: /\.png$/, loader: 'file-loader', options: {
-        outputPath: 'images/'
-      }
-      },
-      { test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
-            options: {
-              attrs: ['img:src', 'link:href']
-            }
-          }
-        ]
-      }
+      { test: /\.(jpg|png|gif)/, use: [{
+        loader: 'url-loader', options: { limit: 5000 }
+      }] }
     ]
   },
   devServer: {
