@@ -1,4 +1,5 @@
 import React from 'react'
+import Logo from '../images/city.png'
 
 const Home = () => (
   <section className="hero is-fullheight-with-navbar">
@@ -6,7 +7,7 @@ const Home = () => (
       <div className="container" id="logo">
 
         <figure className="image is-128x128 has-text-centered" >
-          <img src="../images/city.png" alt=""/>
+          <img src={Logo} alt=""/>
         </figure>
         
         <div className="title">Metropolists</div>
