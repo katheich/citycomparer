@@ -15,7 +15,9 @@ module.exports = {
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.css$/, loader: ['style-loader', 'css-loader'] },
       { test: /\.s(a|c)ss$/, loader: ['style-loader', 'css-loader', 'sass-loader'] },
-      { test: /\.png$/, loader: 'file-loader' }
+      { test: /\.png$/, loader: 'file-loader', options: {
+        outputPath: 'images' }
+      }
     ]
   },
   devServer: {

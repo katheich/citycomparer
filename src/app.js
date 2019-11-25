@@ -10,7 +10,6 @@ import Cities from './components/Cities'
 import Navbar from './components/Navbar'
 import CompareCities from './components/CompareCities'
 
-
 const App = () => (
   <BrowserRouter basename="/metropolists">
     <Navbar />
