@@ -16,7 +16,7 @@ const App = () => (
   <BrowserRouter basename="/metropolists">
     <Navbar logo={Logo} />
     <Switch>
-      <Route exact path="/" logo={Logo} component={Home} />
+      <Route exact path="/" render={(props) => <Home {...props} logo={Logo} />} />
       <Route exact path="/cities" component={Cities} />
       <Route path="/:id1/:id2" component={CompareCities} />
     </Switch>

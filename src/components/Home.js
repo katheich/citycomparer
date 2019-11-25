@@ -1,7 +1,8 @@
 import React from 'react'
 
-const Home = ({ logo }) => (
+const Home = (logo) => (
   <section className="hero is-fullheight-with-navbar">
+    {console.log(logo)}
     <div className="hero-body">
       <div className="container" id="logo">
 
