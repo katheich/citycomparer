@@ -16,7 +16,7 @@ module.exports = {
       { test: /\.css$/, loader: ['style-loader', 'css-loader'] },
       { test: /\.s(a|c)ss$/, loader: ['style-loader', 'css-loader', 'sass-loader'] },
       { test: /\.png$/, loader: 'file-loader', options: {
-        outputPath: '/images'
+        outputPath: 'images/'
       }
       },
       { test: /\.html$/,
@@ -24,7 +24,6 @@ module.exports = {
           {
             loader: 'html-loader',
             options: {
-              root: path.resolve(__dirname, 'app'),
               attrs: ['img:src', 'link:href']
             }
           }
