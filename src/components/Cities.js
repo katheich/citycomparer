@@ -107,8 +107,8 @@ class Cities extends React.Component {
               </button>
             </div>
 
-            {!(this.state.selection.length === 0) ? <div className="level-item"> {this.state.selection.map((name, i) => {
-              return <span key={i} className="tag is-link" id={name} onClick={(e) => this.handleSelect(e)}>#{name}</span>
+            {!(this.state.selection.length === 0) ? <div className="level-item"> {this.state.selection.map((slug, i) => {
+              return <span key={i} className="tag is-link" data-slug={slug} onClick={(e) => this.handleSelect(e)}>#{slug}</span>
             })} </div> : <p className="is-size-7">Select any two cities to compare</p>}
           </div>
 
