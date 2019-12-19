@@ -30,6 +30,14 @@ You can launch the game on GitHub pages [here](https://katheich.github.io/metrop
 
 ## Screenshots
 
+![Homepage](./src/images/screenshots/homepage.png)
+
+![City List](./src/images/screenshots/citieslist.png)
+
+![City Info](./src/images/screenshots/citydetail.png)
+
+![City Comparisons](./src/images/screenshots/citycomparison.png)
+
 ## Future features
 
 ## Bugs / lessons learned
