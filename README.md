@@ -41,7 +41,8 @@ You can launch the site on GitHub pages [here](https://katheich.github.io/metrop
 - The routing of our page would be as follows:
   1. The landing page at path `/`
   2. The city overview page at `/cities`
-  3. 
+  3. The city details would be displayed as a modal overlay and therefore not require their own path (i.e. still on `/cities`)
+  4. The city comparisons would provide the city IDs (or slugs) that are needed for the API requests, so would follow the path `/id-1/id-2`
 
 ### Cities overview 
 
