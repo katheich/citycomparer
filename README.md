@@ -51,7 +51,7 @@ You can launch the site on GitHub pages [here](https://katheich.github.io/metrop
 - Filtering cities: filters are tracked in state variables (`this.state.filters`), possible to both filter by continent and search via city or country name (in the render method, only `this.filterCities()` is mapped.)
 
   ```js
-    filterCities() {
+  filterCities() {
     const re = new RegExp(this.state.filters.search, 'i')
     return this.state.data.filter(city => {
       return (city.continent === this.state.filters.continent || this.state.filters.continent === 'All') && (re.test(city._links['ua:countries'][0].name) || re.test(city.name))
@@ -74,7 +74,7 @@ You can launch the site on GitHub pages [here](https://katheich.github.io/metrop
 - Selecting cities: current selection is tracked in a state variable as well (`this.state.selection`). The selection both the adds to the selection if the city was not previously included, and removes the city from the selection if it was already included. The specific variable added to the selection array is the so-called slug, which the API uses to identify unique cities in its requests.
 
   ```js
-      handleSelect(e) {
+    handleSelect(e) {
       const slug = e.target.dataset.slug
 
       let selection = [...this.state.selection]
@@ -98,7 +98,7 @@ You can launch the site on GitHub pages [here](https://katheich.github.io/metrop
 
 - Since the slug is not nicely formatted, and the Teleport API's response to individual city requests also did not provide a nicely formatted city name, we had to pass down the city name to the city details component 
   ```js
-    handleDetails(e) {
+  handleDetails(e) {
     const city = [e.target.dataset.slug, e.target.dataset.name]
     this.setState({
       modalInfo: city
