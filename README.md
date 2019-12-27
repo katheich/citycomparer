@@ -17,14 +17,13 @@ You can launch the site on GitHub pages [here](https://katheich.github.io/metrop
 - **Be deployed online** and accessible to the public.
 
 ## Technologies used
-- HTML
-- CSS
 - JavaScript (ES6)
 - React.js
+- HTML, JSX
 - Teleport API
 - React Map GL (for Mapbox GL)
 - Git and GitHub
-- Bulma
+- Bulma, SCSS
 - Google Fonts
 
 ## Approach
@@ -32,14 +31,19 @@ You can launch the site on GitHub pages [here](https://katheich.github.io/metrop
 - We decided as a team to search for a open working API which had images and information we could map on. We chose the teleport public API and began wireframing the website, gave ourselves a timeframe to finish the logic aspect on the first day and styling by the final day. 
 ​
 - The main features we decided on were the following:
-  - An landing page
+  - An landing page 
   - A filter which allows uses to search cities by their names and continents. 
   - A navbar which routes to the pages. 
   - Search through cities by name/country and filter by continents   ​
   - A compare component that allows you to see which city does better at different standards of living indicators
   - A detailed city view
 
-### Cities overview
+- The routing of our page would be as follows:
+  1. The landing page at path `/`
+  2. The city overview page at `/cities`
+  3. 
+
+### Cities overview 
 
 - Luckily, one of the end points of the Teleport API provided a complete list of the cities in the data alongside their images, so in order to list them all, we only needed a single API query
 
@@ -190,11 +194,15 @@ You can launch the site on GitHub pages [here](https://katheich.github.io/metrop
 
 - If the category of information we selected is not available for that particular city, the details page will not load correctly
 
+- React Router isn't working perfectly on GitHub Pages, as it allows routing via the homepage, but going to the absolute path directly does not work.
+
 ## Lessons learned
 
 - Depending on the structure of the API, it can be quite tedious to get all the information that you want. For example, we were lucky in having an end-point on the Teleport API that provided *all* photos alongside the city names. However, the nicely formatted city name was only available on that endpoint and the city details request, so in a few instances we had to pass that information down to other components if we wanted to avoid adding another API request.
 
 - Since the information available for each city wasn't perfectly identical, one couldn't rely on the order of information to display correctly. Hence, we used the 'find' method instead. However, this still didn't account for when the information isn't available at all, which should be fixed at a future iteration (i.e. the information should only be rendered if it exists).
+
+- Deploying React Router on GitHub pages was also quite difficult, as many adjustments were needed to move from the dev-server. For instance, all images also had to be saved in the correct locations and the router needed to be pre-fixed with the correct path.
 
 ## Artwork and credit
 
