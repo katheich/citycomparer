@@ -2,6 +2,8 @@
 ### ![GA](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png) General Assembly, Software Engineering Immersive
 # Metropolists
 
+by [Kathrin Eichinger](https://github.com/katheich) & [Awal Yusuf](https://github.com/Awal-Y)
+
 ## Overview
 
 This is my second project of the software engineering immersive course at GA London. The assignment was a mini hackathon to **build a React application** that consumes a **public API**. The project was to be completed **in teams of 2** within **48 hours**.
